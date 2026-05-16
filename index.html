@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <!-- ============================================================
+       META & SEO
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO primário -->
+  <title>Barbearia Juvino | Corte & Estilo com Tradição</title>
+  <meta name="description" content="Barbearia Juvino – cortes masculinos, barba completa e sobrancelha. Atendimento de qualidade, ambiente aconchegante. Agende já pelo WhatsApp!" />
+  <meta name="keywords" content="barbearia, corte masculino, barba, sobrancelha, Juvino, barbearia premium" />
+  <meta name="author" content="Barbearia Juvino" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://barbeariajuvino.com.br/" />
+
+  <!-- Open Graph (Facebook / LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://barbeariajuvino.com.br/" />
+  <meta property="og:title" content="Barbearia Juvino | Corte & Estilo com Tradição" />
+  <meta property="og:description" content="Cortes masculinos, barba completa e sobrancelha. Ambiente premium e atendimento de qualidade." />
+  <meta property="og:image" content="https://barbeariajuvino.com.br/assets/img/og-image.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Barbearia Juvino" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Barbearia Juvino | Corte & Estilo com Tradição" />
+  <meta name="twitter:description" content="Cortes masculinos, barba completa e sobrancelha. Ambiente premium." />
+  <meta name="twitter:image" content="https://barbeariajuvino.com.br/assets/img/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+  <link rel="apple-touch-icon" href="assets/img/logo.svg" />
+
+  <!-- ============================================================
+       FONTES (Google Fonts)
+       Playfair Display: elegante, serifado — para títulos
+       DM Sans: moderno, legível — para corpo
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ============================================================
+       STYLESHEET PRINCIPAL
+       ============================================================ -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- ============================================================
+       SCHEMA.ORG — Rich Snippet para negócio local
+       Ajuda o Google a exibir informações extras na busca
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Barbearia Juvino",
+    "description": "Barbearia premium com cortes masculinos, barba completa e sobrancelha.",
+    "url": "https://barbeariajuvino.com.br",
+    "telephone": "+55-81-99999-9999",
+    "image": "https://barbeariajuvino.com.br/assets/img/og-image.jpg",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday",    "opens": "08:00", "closes": "12:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday",   "opens": "08:00", "closes": "17:40" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "08:00", "closes": "12:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday",  "opens": "08:00", "closes": "17:40" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",    "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday",  "opens": "08:00", "closes": "18:00" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Exemplo, 123",
+      "addressLocality": "Sua Cidade",
+      "addressRegion": "PE",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       SKIP LINK — acessibilidade: permite pular direto ao conteúdo
+       ============================================================ -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- ====================================================================
+       HEADER — fixado no topo, com logo, navegação e toggle de tema
+       ==================================================================== -->
+  <header class="header" id="header" role="banner">
+    <div class="container header__inner">
+
+      <!-- Logo + Nome da Barbearia -->
+      <a href="#inicio" class="header__logo" aria-label="Barbearia Juvino – Página inicial">
+        <!-- SVG da navalha estilizada -->
+        <svg class="logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Logo Barbearia Juvino">
+          <title>Logo Barbearia Juvino</title>
+          <!-- Cabo da navalha -->
+          <rect x="4" y="20" width="28" height="8" rx="4" fill="var(--cor-detalhe)" />
+          <!-- Lâmina -->
+          <path d="M30 20 L44 24 L30 28 Z" fill="var(--cor-primaria)" />
+          <!-- Detalhe decorativo -->
+          <circle cx="10" cy="24" r="3" fill="var(--cor-primaria)" />
+          <circle cx="20" cy="24" r="2" fill="var(--cor-primaria)" opacity="0.6" />
+        </svg>
+        <span class="logo-texto" aria-hidden="false">
+          <strong>Barbearia</strong> Juvino
+        </span>
+      </a>
+
+      <!-- Navegação principal — desktop -->
+      <nav class="header__nav" id="nav-principal" role="navigation" aria-label="Menu principal">
+        <ul class="nav__lista" role="list">
+          <li><a href="#inicio"    class="nav__link" aria-current="page">Início</a></li>
+          <li><a href="#servicos"  class="nav__link">Serviços</a></li>
+          <li><a href="#horarios"  class="nav__link">Horários</a></li>
+          <li><a href="#galeria"   class="nav__link">Galeria</a></li>
+          <li><a href="#sobre"     class="nav__link">Sobre</a></li>
+          <li><a href="#contato"   class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Controles do header: tema + hambúrguer -->
+      <div class="header__controles">
+        <!-- Botão toggle de tema claro/escuro -->
+        <button class="btn-tema" id="btn-tema"
+                aria-label="Alternar tema claro e escuro"
+                aria-pressed="false"
+                title="Alternar tema">
+          <!-- Ícone Sol (tema claro) -->
+          <svg class="icone-sol" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+            <line x1="12" y1="1"  x2="12" y2="3"  stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <!-- Ícone Lua (tema escuro) -->
+          <svg class="icone-lua" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <!-- Botão hambúrguer — mobile -->
+        <button class="btn-hamburger" id="btn-hamburger"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="nav-mobile">
+          <span class="hamburger__linha" aria-hidden="true"></span>
+          <span class="hamburger__linha" aria-hidden="true"></span>
+          <span class="hamburger__linha" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Overlay escuro ao abrir o menu mobile -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+    <!-- Menu Mobile (drawer lateral) -->
+    <nav class="nav-mobile" id="nav-mobile"
+         role="navigation" aria-label="Menu mobile" aria-hidden="true">
+      <ul class="nav-mobile__lista" role="list">
+        <li><a href="#inicio"   class="nav-mobile__link">Início</a></li>
+        <li><a href="#servicos" class="nav-mobile__link">Serviços</a></li>
+        <li><a href="#horarios" class="nav-mobile__link">Horários</a></li>
+        <li><a href="#galeria"  class="nav-mobile__link">Galeria</a></li>
+        <li><a href="#sobre"    class="nav-mobile__link">Sobre</a></li>
+        <li><a href="#contato"  class="nav-mobile__link">Contato</a></li>
+      </ul>
+      <!-- CTA dentro do menu mobile -->
+      <a href="https://wa.me/5581999999999?text=Olá!%20Gostaria%20de%20agendar%20um%20horário."
+         class="btn btn--whatsapp nav-mobile__cta"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Agendar horário pelo WhatsApp">
+        📱 Agendar pelo WhatsApp
+      </a>
+    </nav>
+  </header>
+
+  <!-- ====================================================================
+       CONTEÚDO PRINCIPAL
+       ==================================================================== -->
+  <main id="conteudo-principal">
+
+    <!-- ==================================================================
+         SEÇÃO 1 — HERO / BANNER
+         ================================================================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+
+      <!-- Fundo decorativo: padrão geométrico + overlay azul -->
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__overlay"></div>
+        <!-- Padrão SVG de listras diagonais discretas -->
+        <svg class="hero__pattern" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <pattern id="linhas" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="40" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#linhas)"/>
+        </svg>
+        <!-- Elementos decorativos flutuantes -->
+        <div class="hero__deco hero__deco--1" aria-hidden="true"></div>
+        <div class="hero__deco hero__deco--2" aria-hidden="true"></div>
+        <div class="hero__deco hero__deco--3" aria-hidden="true"></div>
+      </div>
+
+      <div class="container hero__conteudo">
+        <!-- Badge de categoria -->
+        <p class="hero__badge" aria-label="Categoria">✦ Barbearia Premium</p>
+
+        <!-- Título principal: apenas 1 H1 por página (SEO) -->
+        <h1 class="hero__titulo" id="hero-titulo">
+          Arte & Precisão<br />
+          <span class="hero__titulo--destaque">no seu visual</span>
+        </h1>
+
+        <p class="hero__subtitulo">
+          Experimente o melhor em cortes masculinos, barba e sobrancelha.<br />
+          Tradição, estilo e cuidado em cada detalhe.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero__ctas">
+          <a href="https://wa.me/5581999999999?text=Olá!%20Gostaria%20de%20agendar%20um%20horário."
+             class="btn btn--principal"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Agendar horário via WhatsApp">
+            📅 Agendar Horário
+          </a>
+          <a href="#servicos" class="btn btn--secundario" aria-label="Ver nossos serviços">
+            Ver Serviços ↓
+          </a>
+        </div>
+
+        <!-- Indicadores rápidos -->
+        <div class="hero__stats" role="list" aria-label="Destaques da barbearia">
+          <div class="hero__stat" role="listitem">
+            <strong class="hero__stat-num">10+</strong>
+            <span class="hero__stat-label">Anos de experiência</span>
+          </div>
+          <div class="hero__stat" role="listitem">
+            <strong class="hero__stat-num">5★</strong>
+            <span class="hero__stat-label">Avaliação dos clientes</span>
+          </div>
+          <div class="hero__stat" role="listitem">
+            <strong class="hero__stat-num">4</strong>
+            <span class="hero__stat-label">Serviços especializados</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ícone de scroll incentivo -->
+      <a href="#servicos" class="hero__scroll-hint" aria-label="Rolar para serviços">
+        <span class="hero__scroll-hint-line"></span>
+      </a>
+    </section>
+
+    <!-- ==================================================================
+         SEÇÃO 2 — SERVIÇOS
+         ================================================================== -->
+    <section class="servicos" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="container">
+
+        <!-- Cabeçalho da seção -->
+        <div class="secao-header">
+          <p class="secao-header__tag">O que fazemos</p>
+          <h2 class="secao-header__titulo" id="servicos-titulo">Nossos Serviços</h2>
+          <p class="secao-header__descricao">
+            Cada serviço realizado com maestria, usando produtos de qualidade e técnicas modernas.
+          </p>
+        </div>
+
+        <!-- Grid de cards de serviço -->
+        <div class="servicos__grid" role="list">
+
+          <!-- Card 1: Corte Masculino -->
+          <article class="servico-card" role="listitem" aria-label="Serviço: Corte Masculino">
+            <div class="servico-card__icone" aria-hidden="true">
+              <!-- SVG: tesoura -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="36" r="5" stroke="currentColor" stroke-width="2.5"/>
+                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2.5"/>
+                <line x1="16" y1="33" x2="38" y2="11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="16" y1="15" x2="38" y2="37" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="26" y1="22" x2="26" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="servico-card__titulo">Corte Masculino</h3>
+            <p class="servico-card__descricao">
+              Corte tradicional ou moderno, sempre com acabamento impecável e estilo que combina com você.
+            </p>
+            <div class="servico-card__rodape">
+              <span class="servico-card__preco" aria-label="Preço: R$ 25,00">R$ 25,00</span>
+              <a href="https://wa.me/5581999999999?text=Quero%20agendar%20um%20Corte%20Masculino"
+                 class="servico-card__btn" target="_blank" rel="noopener noreferrer"
+                 aria-label="Agendar corte masculino pelo WhatsApp">
+                Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Barba Completa -->
+          <article class="servico-card" role="listitem" aria-label="Serviço: Barba Completa">
+            <div class="servico-card__icone" aria-hidden="true">
+              <!-- SVG: navalha -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="18" width="24" height="12" rx="6" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M28 18 L42 24 L28 30 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <circle cx="13" cy="24" r="3" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="servico-card__titulo">Barba Completa</h3>
+            <p class="servico-card__descricao">
+              Modelagem, hidratação e acabamento perfeito para sua barba. Do simples ao elaborado.
+            </p>
+            <div class="servico-card__rodape">
+              <span class="servico-card__preco" aria-label="Preço: R$ 20,00">R$ 20,00</span>
+              <a href="https://wa.me/5581999999999?text=Quero%20agendar%20uma%20Barba%20Completa"
+                 class="servico-card__btn" target="_blank" rel="noopener noreferrer"
+                 aria-label="Agendar barba completa pelo WhatsApp">
+                Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Sobrancelha -->
+          <article class="servico-card" role="listitem" aria-label="Serviço: Sobrancelha">
+            <div class="servico-card__icone" aria-hidden="true">
+              <!-- SVG: olho/sobrancelha -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 20 Q24 10 40 20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                <path d="M8 28 Q24 18 40 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <ellipse cx="24" cy="34" rx="8" ry="5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="34" r="2.5" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="servico-card__titulo">Sobrancelha</h3>
+            <p class="servico-card__descricao">
+              Design e alinhamento de sobrancelha masculina para um visual mais definido e elegante.
+            </p>
+            <div class="servico-card__rodape">
+              <span class="servico-card__preco" aria-label="Preço: R$ 10,00">R$ 10,00</span>
+              <a href="https://wa.me/5581999999999?text=Quero%20agendar%20Sobrancelha"
+                 class="servico-card__btn" target="_blank" rel="noopener noreferrer"
+                 aria-label="Agendar sobrancelha pelo WhatsApp">
+                Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: Pacote Corte + Barba -->
+          <article class="servico-card servico-card--destaque" role="listitem"
+                   aria-label="Serviço em destaque: Pacote Corte + Barba">
+            <div class="servico-card__badge" aria-label="Mais popular">⭐ Mais Popular</div>
+            <div class="servico-card__icone" aria-hidden="true">
+              <!-- SVG: combo (estrela/pacote) -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 6 L28.5 16.5 L40 17.6 L31.5 25.5 L34 37 L24 31.5 L14 37 L16.5 25.5 L8 17.6 L19.5 16.5 Z"
+                      stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="servico-card__titulo">Pacote Corte + Barba</h3>
+            <p class="servico-card__descricao">
+              O combo completo: corte masculino e barba completa com desconto especial. Saia renovado!
+            </p>
+            <div class="servico-card__rodape">
+              <div>
+                <del class="servico-card__preco-antigo" aria-label="Preço original: R$ 45,00">R$ 45,00</del>
+                <span class="servico-card__preco" aria-label="Preço com desconto: R$ 40,00">R$ 40,00</span>
+              </div>
+              <a href="https://wa.me/5581999999999?text=Quero%20agendar%20o%20Pacote%20Corte%20%2B%20Barba"
+                 class="servico-card__btn" target="_blank" rel="noopener noreferrer"
+                 aria-label="Agendar pacote corte + barba pelo WhatsApp">
+                Agendar
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SEÇÃO 3 — HORÁRIOS DE FUNCIONAMENTO
+         ================================================================== -->
+    <section class="horarios" id="horarios" aria-labelledby="horarios-titulo">
+      <div class="container">
+        <div class="secao-header secao-header--claro">
+          <p class="secao-header__tag">Planeje sua visita</p>
+          <h2 class="secao-header__titulo" id="horarios-titulo">Horário de Funcionamento</h2>
+          <p class="secao-header__descricao">
+            Estamos aqui para atender você. Confira nossos dias e horários.
+          </p>
+        </div>
+
+        <!-- Tabela de horários — acessível -->
+        <div class="horarios__wrapper" role="region" aria-label="Tabela de horários de funcionamento">
+          <table class="horarios__tabela" aria-describedby="horarios-titulo">
+            <thead>
+              <tr>
+                <th scope="col">Dia da Semana</th>
+                <th scope="col">Manhã</th>
+                <th scope="col">Tarde</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-horarios">
+              <!-- Linhas geradas via JS para marcar o dia atual -->
+              <tr data-dia="1"> <!-- Segunda = 1 no JS -->
+                <td class="horarios__dia"><span class="dia-semana-nome">Segunda-feira</span></td>
+                <td>08:00 – 12:00</td>
+                <td class="horarios__fechado">–</td>
+                <td><span class="status-badge status-badge--parcial">Meio período</span></td>
+              </tr>
+              <tr data-dia="2">
+                <td class="horarios__dia"><span class="dia-semana-nome">Terça-feira</span></td>
+                <td>08:00 – 12:00</td>
+                <td>14:00 – 17:40</td>
+                <td><span class="status-badge status-badge--aberto">Aberto</span></td>
+              </tr>
+              <tr data-dia="3">
+                <td class="horarios__dia"><span class="dia-semana-nome">Quarta-feira</span></td>
+                <td>08:00 – 12:00</td>
+                <td class="horarios__fechado">–</td>
+                <td><span class="status-badge status-badge--parcial">Meio período</span></td>
+              </tr>
+              <tr data-dia="4">
+                <td class="horarios__dia"><span class="dia-semana-nome">Quinta-feira</span></td>
+                <td>08:00 – 12:00</td>
+                <td>14:00 – 17:40</td>
+                <td><span class="status-badge status-badge--aberto">Aberto</span></td>
+              </tr>
+              <tr data-dia="5">
+                <td class="horarios__dia"><span class="dia-semana-nome">Sexta-feira</span></td>
+                <td>08:00 – 12:00</td>
+                <td>14:00 – 18:00</td>
+                <td><span class="status-badge status-badge--aberto">Aberto</span></td>
+              </tr>
+              <tr data-dia="6">
+                <td class="horarios__dia"><span class="dia-semana-nome">Sábado</span></td>
+                <td>08:00 – 12:00</td>
+                <td>14:00 – 18:00</td>
+                <td><span class="status-badge status-badge--aberto">Aberto</span></td>
+              </tr>
+              <tr data-dia="0"> <!-- Domingo = 0 no JS -->
+                <td class="horarios__dia"><span class="dia-semana-nome">Domingo</span></td>
+                <td class="horarios__fechado" colspan="2">Fechado</td>
+                <td><span class="status-badge status-badge--fechado">Fechado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Card de status atual — gerado pelo JS -->
+        <div class="horarios__status-atual" id="status-atual" aria-live="polite" aria-atomic="true">
+          <!-- Preenchido pelo script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SEÇÃO 4 — GALERIA DE FOTOS
+         ================================================================== -->
+    <section class="galeria" id="galeria" aria-labelledby="galeria-titulo">
+      <div class="container">
+        <div class="secao-header">
+          <p class="secao-header__tag">Ambiente & Trabalhos</p>
+          <h2 class="secao-header__titulo" id="galeria-titulo">Nossa Galeria</h2>
+          <p class="secao-header__descricao">
+            Um espaço cuidado nos mínimos detalhes para que você se sinta em casa.
+          </p>
+        </div>
+
+        <!-- Grid masonry-like com 6 fotos placeholder -->
+        <div class="galeria__grid" role="list" aria-label="Galeria de fotos da barbearia">
+
+          <figure class="galeria__item galeria__item--grande" role="listitem">
+            <!-- Placeholder SVG com identidade visual da barbearia -->
+            <img src="assets/img/ambiente1.svg"
+                 alt="Interior aconchegante da Barbearia Juvino, com cadeiras clássicas e espelhos"
+                 class="galeria__img" loading="lazy" width="600" height="400" />
+            <figcaption class="galeria__legenda">Ambiente Principal</figcaption>
+          </figure>
+
+          <figure class="galeria__item" role="listitem">
+            <img src="assets/img/ambiente2.svg"
+                 alt="Cadeira de barbeiro clássica em couro preto da Barbearia Juvino"
+                 class="galeria__img" loading="lazy" width="400" height="300" />
+            <figcaption class="galeria__legenda">Cadeira Clássica</figcaption>
+          </figure>
+
+          <figure class="galeria__item" role="listitem">
+            <img src="assets/img/ambiente3.svg"
+                 alt="Produtos profissionais utilizados na Barbearia Juvino"
+                 class="galeria__img" loading="lazy" width="400" height="300" />
+            <figcaption class="galeria__legenda">Produtos Premium</figcaption>
+          </figure>
+
+          <figure class="galeria__item galeria__item--alto" role="listitem">
+            <img src="assets/img/ambiente4.svg"
+                 alt="Barbeiro realizando corte com técnica precisa na Barbearia Juvino"
+                 class="galeria__img" loading="lazy" width="400" height="500" />
+            <figcaption class="galeria__legenda">Técnica & Precisão</figcaption>
+          </figure>
+
+          <figure class="galeria__item" role="listitem">
+            <img src="assets/img/ambiente5.svg"
+                 alt="Detalhe da navalha profissional utilizada na Barbearia Juvino"
+                 class="galeria__img" loading="lazy" width="400" height="300" />
+            <figcaption class="galeria__legenda">Ferramentas Profissionais</figcaption>
+          </figure>
+
+          <figure class="galeria__item" role="listitem">
+            <img src="assets/img/ambiente6.svg"
+                 alt="Resultado final de corte e barba realizado na Barbearia Juvino"
+                 class="galeria__img" loading="lazy" width="400" height="300" />
+            <figcaption class="galeria__legenda">Resultado Final</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SEÇÃO 5 — SOBRE A BARBEARIA
+         ================================================================== -->
+    <section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="container sobre__inner">
+
+        <!-- Visual decorativo (lado esquerdo) -->
+        <div class="sobre__visual" aria-hidden="true">
+          <div class="sobre__card-visual">
+            <!-- Grande letra decorativa -->
+            <span class="sobre__letra-deco">J</span>
+            <div class="sobre__visual-texto">
+              <strong>Est. 2014</strong>
+              <p>Uma décade de excelência</p>
+            </div>
+          </div>
+          <!-- Elemento flutuante decorativo -->
+          <div class="sobre__float-badge">
+            <span>✦</span> 10+ Anos de Tradição
+          </div>
+        </div>
+
+        <!-- Texto (lado direito) -->
+        <div class="sobre__texto">
+          <p class="secao-header__tag">Nossa história</p>
+          <h2 class="secao-header__titulo" id="sobre-titulo">Sobre a Barbearia Juvino</h2>
+
+          <p class="sobre__paragrafo">
+            A <strong>Barbearia Juvino</strong> nasceu em 2014 com um propósito claro: oferecer
+            atendimento de qualidade, em um ambiente acolhedor, onde cada cliente se sente especial.
+          </p>
+          <p class="sobre__paragrafo">
+            Com mais de uma década de experiência, nosso barbeiro Juvino combina técnicas clássicas
+            com as tendências contemporâneas, garantindo um resultado que respeita o estilo único
+            de cada pessoa.
+          </p>
+
+          <!-- Missão e diferenciais -->
+          <div class="sobre__diferenciais" role="list" aria-label="Diferenciais da Barbearia Juvino">
+
+            <div class="diferencial" role="listitem">
+              <div class="diferencial__icone" aria-hidden="true">🎯</div>
+              <div>
+                <h3 class="diferencial__titulo">Nossa Missão</h3>
+                <p class="diferencial__texto">Proporcionar uma experiência de autocuidado que eleve a autoestima de cada cliente.</p>
+              </div>
+            </div>
+
+            <div class="diferencial" role="listitem">
+              <div class="diferencial__icone" aria-hidden="true">🏆</div>
+              <div>
+                <h3 class="diferencial__titulo">Qualidade Premium</h3>
+                <p class="diferencial__texto">Produtos e ferramentas de primeira linha para um resultado impecável.</p>
+              </div>
+            </div>
+
+            <div class="diferencial" role="listitem">
+              <div class="diferencial__icone" aria-hidden="true">🤝</div>
+              <div>
+                <h3 class="diferencial__titulo">Atendimento Personalizado</h3>
+                <p class="diferencial__texto">Cada cliente é único. Ouvimos, entendemos e entregamos o visual que você quer.</p>
+              </div>
+            </div>
+
+            <div class="diferencial" role="listitem">
+              <div class="diferencial__icone" aria-hidden="true">📍</div>
+              <div>
+                <h3 class="diferencial__titulo">Localização Central</h3>
+                <p class="diferencial__texto">Fácil acesso, estacionamento próximo e ambiente confortável para a sua espera.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SEÇÃO 6 — CONTATO
+         ================================================================== -->
+    <section class="contato" id="contato" aria-labelledby="contato-titulo">
+      <div class="container">
+        <div class="secao-header secao-header--claro">
+          <p class="secao-header__tag">Fale conosco</p>
+          <h2 class="secao-header__titulo" id="contato-titulo">Entre em Contato</h2>
+          <p class="secao-header__descricao">
+            Agende pelo WhatsApp ou venha nos visitar. Será um prazer atender você!
+          </p>
+        </div>
+
+        <div class="contato__grid">
+
+          <!-- Coluna: informações de contato -->
+          <div class="contato__info">
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5581999999999?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Barbearia%20Juvino."
+               class="contato__card contato__card--whatsapp"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Abrir WhatsApp para agendar horário">
+              <div class="contato__card-icone" aria-hidden="true">
+                <!-- SVG WhatsApp -->
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+              </div>
+              <div class="contato__card-texto">
+                <strong>WhatsApp</strong>
+                <span>(81) 99999-9999</span>
+                <small>Clique para agendar agora</small>
+              </div>
+            </a>
+
+            <!-- Endereço -->
+            <div class="contato__card" aria-label="Endereço da barbearia">
+              <div class="contato__card-icone" aria-hidden="true">📍</div>
+              <div class="contato__card-texto">
+                <strong>Endereço</strong>
+                <span>Rua Exemplo, 123 – Centro</span>
+                <small>Sua Cidade – PE</small>
+              </div>
+            </div>
+
+            <!-- Horário rápido -->
+            <div class="contato__card" aria-label="Horário de funcionamento resumido">
+              <div class="contato__card-icone" aria-hidden="true">🕒</div>
+              <div class="contato__card-texto">
+                <strong>Horário</strong>
+                <span>Seg–Sáb: 08h às 18h</span>
+                <small>Domingo: Fechado</small>
+              </div>
+            </div>
+
+            <!-- Botão de agenda -->
+            <a href="https://wa.me/5581999999999?text=Quero%20agendar%20um%20horário%20na%20Barbearia%20Juvino!"
+               class="btn btn--principal btn--bloco"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Abrir agenda pelo WhatsApp">
+              📅 Abrir Agenda
+            </a>
+          </div>
+
+          <!-- Coluna: mapa incorporado -->
+          <div class="contato__mapa">
+            <div class="mapa__wrapper" role="region" aria-label="Mapa de localização da Barbearia Juvino">
+              <!-- TODO: Substitua o src pelo link real do Google Maps Embed API -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8234!2d-35.0!3d-8.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBarbearia%20Juvino!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização da Barbearia Juvino no Google Maps"
+                aria-label="Mapa com a localização da Barbearia Juvino">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         CHATBOT IA — PLACEHOLDER
+         Aqui será integrado o chatbot de IA futuramente.
+         O arquivo chatbot.js contém uma função mock `iniciarChatbot()`
+         ================================================================== -->
+    <div id="chatbot-container"
+         role="complementary"
+         aria-label="Assistente virtual da Barbearia Juvino"
+         aria-live="polite">
+      <!-- O chatbot real será renderizado aqui pelo chatbot.js -->
+      <!-- Placeholder visual exibido até a integração real -->
+      <div class="chatbot-placeholder" id="chatbot-placeholder">
+        <button class="chatbot-fab" id="chatbot-fab"
+                aria-label="Abrir assistente virtual"
+                aria-expanded="false"
+                aria-controls="chatbot-janela">
+          <span class="chatbot-fab__icone" aria-hidden="true">💬</span>
+          <span class="chatbot-fab__texto">Assistente</span>
+        </button>
+
+        <div class="chatbot-janela" id="chatbot-janela" aria-hidden="true" role="dialog"
+             aria-label="Janela do assistente virtual" aria-modal="false">
+          <div class="chatbot-janela__header">
+            <strong>🤖 Assistente Juvino</strong>
+            <button class="chatbot-janela__fechar" aria-label="Fechar assistente virtual"
+                    id="chatbot-fechar">✕</button>
+          </div>
+          <div class="chatbot-janela__corpo">
+            <p class="chatbot-janela__msg chatbot-janela__msg--bot">
+              Olá! Sou o assistente virtual da Barbearia Juvino. Em breve poderei te ajudar a
+              agendar horários, tirar dúvidas e muito mais! 🪒
+            </p>
+            <p class="chatbot-janela__aviso">
+              <em>Chatbot IA em desenvolvimento. Por enquanto, agende pelo WhatsApp!</em>
+            </p>
+            <a href="https://wa.me/5581999999999"
+               class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer"
+               aria-label="Ir para WhatsApp">
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ====================================================================
+       FOOTER — Rodapé completo
+       ==================================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+
+      <!-- Coluna 1: Marca -->
+      <div class="footer__col footer__col--marca">
+        <a href="#inicio" class="header__logo footer__logo" aria-label="Barbearia Juvino – Topo da página">
+          <svg class="logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="4" y="20" width="28" height="8" rx="4" fill="var(--cor-detalhe)" />
+            <path d="M30 20 L44 24 L30 28 Z" fill="var(--cor-primaria)" />
+            <circle cx="10" cy="24" r="3" fill="var(--cor-primaria)" />
+            <circle cx="20" cy="24" r="2" fill="var(--cor-primaria)" opacity="0.6" />
+          </svg>
+          <span class="logo-texto"><strong>Barbearia</strong> Juvino</span>
+        </a>
+        <p class="footer__descricao">
+          Arte, precisão e estilo para o homem moderno. Sua melhor versão começa aqui.
+        </p>
+        <!-- Redes sociais -->
+        <div class="footer__redes" aria-label="Redes sociais da Barbearia Juvino">
+          <a href="https://instagram.com/barbeariajuvino" target="_blank" rel="noopener noreferrer"
+             class="footer__rede" aria-label="Instagram da Barbearia Juvino">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://facebook.com/barbeariajuvino" target="_blank" rel="noopener noreferrer"
+             class="footer__rede" aria-label="Facebook da Barbearia Juvino">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/5581999999999" target="_blank" rel="noopener noreferrer"
+             class="footer__rede" aria-label="WhatsApp da Barbearia Juvino">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Links rápidos -->
+      <nav class="footer__col" aria-label="Links rápidos do rodapé">
+        <h3 class="footer__col-titulo">Links Rápidos</h3>
+        <ul class="footer__lista" role="list">
+          <li><a href="#inicio"   class="footer__link">Início</a></li>
+          <li><a href="#servicos" class="footer__link">Serviços</a></li>
+          <li><a href="#horarios" class="footer__link">Horários</a></li>
+          <li><a href="#galeria"  class="footer__link">Galeria</a></li>
+          <li><a href="#sobre"    class="footer__link">Sobre</a></li>
+          <li><a href="#contato"  class="footer__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Coluna 3: Serviços -->
+      <div class="footer__col">
+        <h3 class="footer__col-titulo">Serviços</h3>
+        <ul class="footer__lista" role="list">
+          <li><span class="footer__item">✂ Corte Masculino</span></li>
+          <li><span class="footer__item">🪒 Barba Completa</span></li>
+          <li><span class="footer__item">✦ Sobrancelha</span></li>
+          <li><span class="footer__item">⭐ Pacote Corte + Barba</span></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: Contato rápido -->
+      <div class="footer__col">
+        <h3 class="footer__col-titulo">Contato</h3>
+        <address class="footer__endereco">
+          <p>📍 Rua Exemplo, 123 – Centro</p>
+          <p>Sua Cidade – PE</p>
+          <p>
+            <a href="tel:+5581999999999" class="footer__link" aria-label="Ligar para a Barbearia Juvino">
+              📞 (81) 99999-9999
+            </a>
+          </p>
+          <p>
+            <a href="https://wa.me/5581999999999" class="footer__link"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Enviar mensagem no WhatsApp">
+              💬 WhatsApp
+            </a>
+          </p>
+        </address>
+      </div>
+    </div>
+
+    <!-- Linha inferior do rodapé -->
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copyright">
+          &copy; <span id="ano-atual"></span> Barbearia Juvino. Todos os direitos reservados.
+        </p>
+        <p class="footer__creditos">
+          Feito com ♥ para o melhor visual da cidade.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       SCRIPTS JavaScript
+       Carregados no final do body para melhor performance
+       ==================================================================== -->
+  <!-- Script principal: menu, tema, horários, scroll -->
+  <script src="assets/js/script.js"></script>
+
+  <!-- Script do Chatbot IA (placeholder/mock) -->
+  <script src="assets/js/chatbot.js"></script>
+
+</body>
+</html>
