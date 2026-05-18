@@ -1335,7 +1335,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .chatbot-janela__msg--bot {
   background: var(--cor-detalhe);
-  color: var(--texto-primario);
+  color: var(--cor-escura);
   align-self: flex-start;
 }
 
