@@ -1499,6 +1499,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--raio-full);
 }
 
+/* Scrollbar personalizada no tema claro */
+[data-theme="light"] ::-webkit-scrollbar { width: 8px; }
+[data-theme="light"] ::-webkit-scrollbar-track { background: #0A1520; }
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: var(--cor-detalhe);
+  border-radius: var(--raio-full);
+}
+
 /* ================================================================
    14. MEDIA QUERIES — Tablet e Desktop
    Abordagem: Mobile First → expande progressivamente
