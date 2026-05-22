@@ -914,14 +914,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Linha do dia atual — destacada por JS */
 .horarios__tabela tbody tr.dia-atual {
-  background: var(--cor-detalhe);
+  background: var(--texto-suave);
 }
 .horarios__tabela tbody tr.dia-atual .horarios__dia {
-  font-weight: 700;
+  font-weight: 900;
   color: var(--cor-primaria);
-}
-.horarios__tabela tbody tr.dia-atual::after {
-  content: ' ← Hoje';
 }
 
 .horarios__fechado {
