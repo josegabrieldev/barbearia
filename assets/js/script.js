@@ -204,7 +204,7 @@ function marcarDiaAtualHorarios() {
         const span = document.createElement('span');
         span.textContent = ' (Hoje)';
         span.style.cssText = `
-          font-size: 0.7em;
+          font-size: 0.8em;
           font-weight: 700;
           color: var(--cor-primaria);
           background: var(--cor-detalhe);
