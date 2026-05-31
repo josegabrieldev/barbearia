@@ -1238,111 +1238,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ================================================================
-   11. CHATBOT PLACEHOLDER
-   ================================================================ */
-#chatbot-container {
-  /* Posicionamento do FAB no canto inferior direito */
-  position: fixed;
-  bottom: var(--esp-4);
-  right: var(--esp-4);
-  z-index: 900;
-}
-
-.chatbot-fab {
-  display: flex;
-  align-items: center;
-  gap: var(--esp-1);
-  padding: var(--esp-2) var(--esp-3);
-  background: var(--cor-primaria);
-  color: var(--cor-clara);
-  border-radius: var(--raio-full);
-  font-size: var(--fs-sm);
-  font-weight: 600;
-  font-family: var(--fonte-corpo);
-  box-shadow: var(--sombra-lg);
-  transition: all var(--transicao);
-  cursor: pointer;
-  border: none;
-}
-.chatbot-fab:hover {
-  background: var(--cor-acento);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(15,76,129,0.4);
-}
-
-.chatbot-fab__icone {
-  font-size: var(--fs-lg);
-}
-
-/* Janela do chatbot */
-.chatbot-janela {
-  position: absolute;
-  bottom: calc(100% + var(--esp-2));
-  right: 0;
-  width: min(340px, 90vw);
-  background: var(--bg-superficie);
-  border-radius: var(--raio-lg);
-  box-shadow: var(--sombra-lg);
-  border: 1px solid var(--borda);
-  overflow: hidden;
-  transform: scale(0.8) translateY(20px);
-  transform-origin: bottom right;
-  opacity: 0;
-  pointer-events: none;
-  transition: all var(--transicao);
-}
-.chatbot-janela.ativa {
-  transform: scale(1) translateY(0);
-  opacity: 1;
-  pointer-events: all;
-}
-
-.chatbot-janela__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--esp-2) var(--esp-3);
-  background: var(--cor-primaria);
-  color: var(--cor-clara);
-}
-
-.chatbot-janela__fechar {
-  color: var(--cor-clara);
-  font-size: var(--fs-lg);
-  padding: var(--esp-1);
-  border-radius: var(--raio-sm);
-  transition: background var(--transicao);
-}
-.chatbot-janela__fechar:hover {
-  background: rgba(255,255,255,0.2);
-}
-
-.chatbot-janela__corpo {
-  padding: var(--esp-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--esp-3);
-}
-
-.chatbot-janela__msg {
-  padding: var(--esp-2) var(--esp-3);
-  border-radius: var(--raio);
-  font-size: var(--fs-sm);
-  line-height: 1.6;
-}
-.chatbot-janela__msg--bot {
-  background: var(--cor-detalhe);
-  color: var(--cor-escura);
-  align-self: flex-start;
-}
-
-.chatbot-janela__aviso {
-  font-size: var(--fs-xs);
-  color: var(--texto-suave);
-  text-align: center;
-}
-
-/* ================================================================
    12. FOOTER
    ================================================================ */
 .footer {
@@ -1605,7 +1500,6 @@ h1, h2, h3, h4, h5, h6 {
 /* —— Impressão —— */
 @media print {
   .header,
-  .chatbot-placeholder,
   .hero__scroll-hint {
     display: none !important;
   }
