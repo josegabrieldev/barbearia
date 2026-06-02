@@ -1352,6 +1352,135 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255,255,255,0.4);
 }
 
+/* =====================================================
+   MODAL DE PORTFÓLIO
+   position:fixed + inset:0 = cobre a tela inteira
+   z-index maior que o header (1000) pra ficar na frente
+   display:flex centraliza a caixa horizontal e verticalmente
+
+   opacity + pointer-events controlam visibilidade
+   sem tirar do DOM — importante pra acessibilidade
+   o leitor de tela não lê quando aria-hidden="true"
+   mas o elemento precisa existir pra animação funcionar
+   ===================================================== */
+.modal-demo {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--esp-4);
+
+  /* Estado inicial: invisível e não clicável */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transicao);
+}
+
+/* Quando o JS adicionar a classe .ativo
+   o modal aparece e volta a receber cliques */
+.modal-demo.ativo {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* =====================================================
+   BACKDROP — camada escura atrás da caixa
+   position:fixed + inset:0 cobre tudo atrás do modal
+   backdrop-filter aplica desfoque no conteúdo atrás
+   -webkit- é o prefixo necessário para Safari
+   ===================================================== */
+.modal-demo__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* =====================================================
+   CAIXA DO MODAL
+   position:relative + z-index:1 garante que fica
+   na frente do backdrop que está atrás
+   
+   transform no estado inicial desloca levemente pra baixo
+   a transição cria o efeito de "subir" ao abrir
+   ===================================================== */
+.modal-demo__caixa {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-superficie);
+  border-radius: var(--raio-lg);
+  padding: var(--esp-6);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--sombra-lg);
+
+  /* Animação de entrada */
+  transform: translateY(20px);
+  transition: transform var(--transicao);
+}
+
+.modal-demo.ativo .modal-demo__caixa {
+  transform: translateY(0);
+}
+
+.modal-demo__icone {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--esp-3);
+}
+
+.modal-demo__titulo {
+  font-size: var(--fs-xl);
+  color: var(--texto-primario);
+  margin-bottom: var(--esp-2);
+}
+
+.modal-demo__texto {
+  font-size: var(--fs-base);
+  color: var(--texto-secundario);
+  line-height: 1.7;
+  margin-bottom: var(--esp-2);
+}
+
+.modal-demo__texto strong {
+  color: var(--cor-primaria);
+}
+
+.modal-demo__subtexto {
+  font-size: var(--fs-sm);
+  color: var(--texto-suave);
+  margin-bottom: var(--esp-5);
+}
+
+
+.modal-demo__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--esp-1);
+  padding: var(--esp-2) var(--esp-4);
+  border-radius: var(--raio-full);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  font-family: var(--fonte-corpo);
+  transition: all var(--transicao);
+  cursor: pointer;
+  white-space: nowrap;
+  background: var(--cor-primaria);
+  color: var(--cor-clara);
+  box-shadow: var(--sombra-md)
+}
+
+.modal-demo__btn:hover,
+.modal-demo__btn:focus-visible {
+  background: var(--cor-detalhe);
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-lg);
+}
+
+
 /* ================================================================
    13. TEMA ESCURO
    Ativado pela classe [data-theme="dark"] no <html>
