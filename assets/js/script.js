@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   inicializarNavAtiva();
   inicializarAnimacoesEntrada();
   atualizarAnoCopyright();
+  inicializarModalDemo();
 });
 
 
@@ -421,4 +422,43 @@ function atualizarAnoCopyright() {
   if (spanAno) {
     spanAno.textContent = new Date().getFullYear();
   }
+}
+
+/* =====================================================
+   11.MODAL DE PORTFÓLIO
+   Controla abertura e fechamento do aviso de demo
+   ===================================================== */
+
+function inicializarModalDemo() {
+  const modal = document.getElementById("modal-demo");
+  const spanRede = document.getElementById("modal-demo-rede");
+  const btnFechar = document.getElementById("modal-demo-fechar");
+  const backdrop = document.querySelector(".modal-demo__backdrop");
+  const linksDemo = document.querySelectorAll('[data-demo="true"]');
+
+  if (!modal || !spanRede || !btnFechar || !linksDemo.length) return;
+
+  function fecharModal(){
+    modal.classList.remove("ativo");
+    modal.setAttribute("aria-hidden", "true");
+  }
+
+  btnFechar.addEventListener("click", fecharModal);
+  backdrop.addEventListener("click", fecharModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('ativo')) {
+      fecharModal();
+    }
+  });
+
+  linksDemo.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const valorRede = link.dataset.rede;
+      spanRede.textContent = valorRede;
+      modal.classList.add("ativo");
+      modal.setAttribute("aria-hidden", "false");
+    });
+  });
 }
