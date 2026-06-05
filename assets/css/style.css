@@ -171,6 +171,19 @@ h1, h2, h3, h4, h5, h6 {
   top: var(--esp-1);
 }
 
+/* Visualmente invisível mas lido por leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Container centrado */
 .container {
   width: 100%;
@@ -1352,17 +1365,9 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255,255,255,0.4);
 }
 
-/* =====================================================
-   MODAL DE PORTFÓLIO
-   position:fixed + inset:0 = cobre a tela inteira
-   z-index maior que o header (1000) pra ficar na frente
-   display:flex centraliza a caixa horizontal e verticalmente
-
-   opacity + pointer-events controlam visibilidade
-   sem tirar do DOM — importante pra acessibilidade
-   o leitor de tela não lê quando aria-hidden="true"
-   mas o elemento precisa existir pra animação funcionar
-   ===================================================== */
+/* =============================
+   13. MODAL DE PORTFÓLIO
+   ============================= */
 .modal-demo {
   position: fixed;
   inset: 0;
@@ -1401,9 +1406,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* =====================================================
    CAIXA DO MODAL
-   position:relative + z-index:1 garante que fica
-   na frente do backdrop que está atrás
-   
    transform no estado inicial desloca levemente pra baixo
    a transição cria o efeito de "subir" ao abrir
    ===================================================== */
@@ -1480,9 +1482,43 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--sombra-lg);
 }
 
+/* ===================================
+   14. BOTÃO WHATSAPP FLUTUANTE
+   =================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: var(--esp-6);
+  left: var(--esp-4);
+  z-index: 900;
+
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
+  background: var(--cor-whatsapp);
+  color: var(--cor-clara);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+}
 
 /* ================================================================
-   13. TEMA ESCURO
+   15. TEMA ESCURO
    Ativado pela classe [data-theme="dark"] no <html>
    ================================================================ */
 [data-theme="dark"] {
