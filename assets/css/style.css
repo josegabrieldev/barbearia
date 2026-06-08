@@ -1250,6 +1250,24 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 300px;
 }
 
+/* =====================================================
+   NOTA DO MAPA
+   ===================================================== */
+.mapa__nota {
+  font-size: var(--fs-xs);
+  color: var(--texto-secundario);
+  margin-top: var(--esp-2);
+  padding: var(--esp-2);
+  line-height: 1.6;
+  display: flex;
+  gap: var(--esp-1);
+  align-items: flex-start;
+}
+
+.mapa__nota em {
+  color: var(--texto-secundario);
+}
+
 /* ================================================================
    12. FOOTER
    ================================================================ */
