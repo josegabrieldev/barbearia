@@ -25,6 +25,13 @@ O barbeiro que trabalha solo enfrenta um desafio diário: interromper atendiment
 O site centraliza essas informações publicamente — horários de funcionamento, serviços e canal de contato direto — reduzindo interrupções durante o trabalho e mensagens fora do horário.
 
 <!-- 4. DEMONSTRAÇÃO — link ao vivo + screenshot + GIF -->
+## 🚀 Demonstração
+
+[🔗 Acesse o projeto ao vivo](https://josegabrieldev.github.io/barbearia/)
+
+![screenshot do projeto em Breve](caminho/para/imagem.png)
+
+![GIF do projeto em Breve](caminho/para/imagem.png)
 
 <!-- 5. FUNCIONALIDADES -->
 
